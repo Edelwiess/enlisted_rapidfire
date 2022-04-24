@@ -11,3 +11,7 @@ Press "\\" to enable/disable the autofire
 Press "]" to enable/disable recoil control
 
 Press "=" to switch recoil control mode
+
+
+
+adjust recoil control 6 -> 4 -> 2 -> 8 for BerniBear

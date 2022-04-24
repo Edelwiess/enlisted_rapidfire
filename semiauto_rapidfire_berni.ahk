@@ -4,10 +4,10 @@
 ;---------------------------------------
 
 	wantsRbeforeL := 1 ; If wants to be aiming before autofire or compensation.
-	comp := 12 ; Value for auto fire compensation.
+	comp := 6 ; Value for auto fire compensation.
     V_AutoFire := 0 ; Value for Autofire being on and off.
 	V_Compensation := 0 ;Value for Compensation being on and off.
-	V_Compensation_mode := 1 ;Value for Compensation mode. Fedrov, FG42 2:12 M2 Carbin 3:16 AVT 4:30 MP43 4:6
+	V_Compensation_mode := 1 ;Value for Compensation mode. 
 	currunt_gun := "FG42/Fedrov"
 	V_reduce_comp_time := 2000 ; Value for how much time do the Compensation begin to reduce
 	
@@ -49,14 +49,14 @@
 		if V_Compensation_mode = 1 
 		{
 			V_Compensation_mode = 2
-			comp = 16
+			comp = 4
 			current_gun = "M2 Carbin"
 			SetTimer, RemoveToolTip, 2000
 		}
 		else if V_Compensation_mode = 2 
 		{
 			V_Compensation_mode = 3
-			comp = 30
+			comp = 2
 			current_gun = "AVT40"
 			SetTimer, RemoveToolTip, 2000
 		}
@@ -67,17 +67,10 @@
 			current_gun = "MP43"
 			SetTimer, RemoveToolTip, 2000
 		}
-		else if V_Compensation_mode = 4 
-		{
-			V_Compensation_mode = 5
-			comp = 10
-			current_gun = "FG42-2/Sniper MKB42(H)"
-			SetTimer, RemoveToolTip, 2000
-		}
 		else
 		{
 			V_Compensation_mode = 1
-			comp = 12
+			comp = 6
 			current_gun = "FG42/Fedrov"
 			SetTimer, RemoveToolTip, 2000
 		}
