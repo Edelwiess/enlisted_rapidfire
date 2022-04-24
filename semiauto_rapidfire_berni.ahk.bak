@@ -4,7 +4,7 @@
 ;---------------------------------------
 
 	wantsRbeforeL := 1 ; If wants to be aiming before autofire or compensation.
-	comp := 2 ; Value for auto fire compensation.
+	comp := 6 ; Value for auto fire compensation.
     V_AutoFire := 0 ; Value for Autofire being on and off.
 	V_Compensation := 0 ;Value for Compensation being on and off.
 	V_Compensation_mode := 1 ;Value for Compensation mode. 
@@ -49,14 +49,14 @@
 		if V_Compensation_mode = 1 
 		{
 			V_Compensation_mode = 2
-			comp = 6
+			comp = 2
 			current_gun = "M2 Carbin"
 			SetTimer, RemoveToolTip, 2000
 		}
 		else
 		{
 			V_Compensation_mode = 1
-			comp = 2
+			comp = 6
 			current_gun = "FG42/Fedrov"
 			SetTimer, RemoveToolTip, 2000
 		}
